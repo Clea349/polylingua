@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>PolyLingua 🌐</title>
+  <title>PolyLingua</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,10 +10,43 @@
 <div class="container">
   <h1>PolyLingua 🌐</h1>
 
-  <textarea id="sourceText" placeholder="Écris ou colle ton texte ici..."></textarea>
+  <!-- Zone de traduction -->
+  <div class="translator">
+    <textarea id="sourceText" placeholder="Écris ou colle ton texte ici..."></textarea>
 
-  <div class="lang-select">
-    <div>
-      <label for="sourceLang">De :</label>
-      <select id="sourceLang"></select>
+    <div class="lang-select">
+      <div>
+        <label for="sourceLang">De :</label>
+        <select id="sourceLang">
+          <option value="auto">Auto</option>
+          <option value="fr">Français</option>
+          <option value="en">Anglais</option>
+          <option value="es">Espagnol</option>
+          <option value="de">Allemand</option>
+          <option value="ja">Japonais</option>
+          <option value="zh">Chinois</option>
+          <option value="ar">Arabe</option>
+        </select>
+      </div>
+      <div>
+        <label for="targetLang">Vers :</label>
+        <select id="targetLang">
+          <option value="en">Anglais</option>
+          <option value="fr">Français</option>
+          <option value="es">Espagnol</option>
+          <option value="de">Allemand</option>
+          <option value="ja">Japonais</option>
+          <option value="zh">Chinois</option>
+          <option value="ar">Arabe</option>
+        </select>
+      </div>
     </div>
+
+    <button id="translateBtn">Traduire 🌐</button>
+    <textarea id="resultText" placeholder="Résultat..." readonly></textarea>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
