@@ -13,13 +13,12 @@ translateBtn.addEventListener("click", async () => {
   const to = targetLang.value;
 
   try {
-    const res = await fetch("https://libretranslate.de/translate", {
+    const res = await fetch("https://polylingua-backend.vercel.app/api/translate", {
       method: "POST",
       body: JSON.stringify({
-        q: text,
-        source: from,
-        target: to,
-        format: "text"
+        text: text,
+        from: from,
+        to: to
       }),
       headers: { "Content-Type": "application/json" }
     });
